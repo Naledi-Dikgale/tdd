@@ -1,4 +1,4 @@
-# TDD-prac
+# TDD
 
 <a name="readme-top"></a>
 
@@ -25,9 +25,9 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [TDD-prac] <a name="about-project"></a>
+# 📖 [TDD] <a name="about-project"></a>
 
-**[TDD-prac]** Is an app making created making use of TDD methodology. It solves some mathematical problems name; Fizzbuzz, reverse, and Factorial.
+**[TDD]** Is an app making created making use of TDD methodology. It solves some mathematical problems name; Fizzbuzz, reverse, and Factorial.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -67,7 +67,7 @@ In order to run this project you need:
 Clone this repository to your desired folder:
 
 ```sh
-  cd TDD-prac
+  cd TDD
   git clone https://github.com/Naledi-Dikgale/tdd.git
 ```
 
@@ -76,7 +76,7 @@ Clone this repository to your desired folder:
 Install this project with:
 
 ```sh
-  cd TDD-prac
+  cd TDD
   bundle install
   gem install --no-document rubocop -v '>= 1.0, < 2.0'
   gem install rspec
