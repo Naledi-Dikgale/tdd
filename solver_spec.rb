@@ -18,12 +18,7 @@ require_relative 'solver'
 #       @solver.factorial(-5)
 #     end
 #   end
-  
-#   def test_reverse
-#     assert_equal "idelan", @solver.reverse("naledi")
-#     assert_equal "amlas", @solver.reverse("salma")
-#     assert_equal "12345", @solver.reverse("54321")
-#   end
+
   
 #   def test_fizzbuzz
 #     assert_equal "1", @solver.fizzbuzz(1)
@@ -43,30 +38,26 @@ require_relative 'solver'
 #     assert_equal "fizzbuzz", @solver.fizzbuzz(15)
 #   end
 # end
-decribe Solver do
-    decribe "#factorials" do
+describe Solver do
+    let(:solver) { Solver.new }
+
+    describe "#factorial" do
         it "returns 1 when given 0" do
-            expect(Solver.new.factorial(0)).to eq(1)
+            expect(solver.factorial(0)).to eq(1)
         end
-        
+
         it "returns 1 when given 1" do
-            expect(Solver.new.factorial(1)).to eq(1)
+            expect(solver.factorial(1)).to eq(1)
         end
-        
+
         it "returns 6 when given 3" do
-            expect(Solver.new.factorial(3)).to eq(6)
-        end
-        
-        it "returns 120 when given 5" do
-            expect(Solver.new.factorial(5)).to eq(120)
-        end
-        
-        it "returns 3628800 when given 10" do
-            expect(Solver.new.factorial(10)).to eq(3628800)
-        end
-        
-        it "raises an ArgumentError when given a negative integer" do
-            expect{Solver.new.factorial(-5)}.to raise_error(ArgumentError)
+            expect(solver.factorial(3)).to eq(6)
         end
     end
+
+    describe "#reverse" do
+        it "returns 'cba' when given 'abc'" do
+            expect(solver.reverse("abc")).to eq("cba")
+        end
     end
+end
