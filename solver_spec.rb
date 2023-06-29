@@ -11,6 +11,10 @@ describe Solver do
       expect(solver.factorial(1)).to eq(1)
     end
 
+    it 'returns -1 when given -1' do
+      expect { solver.factorial(-1) }.to raise_error(ArgumentError)
+    end
+
     it 'returns 6 when given 3' do
       expect(solver.factorial(3)).to eq(6)
     end
