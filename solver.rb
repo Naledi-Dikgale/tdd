@@ -1,27 +1,24 @@
 class Solver
-    # def factorial(n)
-    #     if n < 0
-    #         raise ArgumentError
-    #     end
-    #     if n == 0
-    #         return 1
-    #     end
-    #     return n * factorial(n-1)
-    # end
-    
-    # def reverse(str)
-    #     return str.reverse
-    # end
-    
-    # def fizzbuzz(n)
-    #     if n % 15 == 0
-    #         return "fizzbuzz"
-    #     elsif n % 3 == 0
-    #         return "fizz"
-    #     elsif n % 5 == 0
-    #         return "buzz"
-    #     else
-    #         return n.to_s
-    #     end
-    # end
+  def factorial(number)
+    raise ArgumentError if number.negative?
+    return 1 if number.zero?
+
+    number * factorial(number - 1)
+  end
+
+  def reverse(str)
+    str.reverse
+  end
+
+  def fizzbuzz(number)
+    if (number % 15).zero?
+      'fizzbuzz'
+    elsif (number % 3).zero?
+      'fizz'
+    elsif (number % 5).zero?
+      'buzz'
+    else
+      number.to_s
+    end
+  end
 end
